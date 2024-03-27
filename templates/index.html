@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,658 +9,733 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="icon" type="image/png" href="../static/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Ojuju:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../static/images/logo.png" />
 
     <style>
-        /* Untuk bilah scroll vertikal */
-::-webkit-scrollbar {
-    width: 7px; /* Lebar bilah scroll */
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: white;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, #FF5733 ,#E7D60D);
-    border-radius: 5px; /* Radius sudut bilah scroll */
-    height: 30px; /* Tinggi bilah scroll */
-  }
-
-  /* Handle saat hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #999999; /* Ganti dengan warna gradient yang diinginkan */
-  }
-
-  ::selection {
-    background: #E7D60D; /* Warna latar belakang gradient */
-    color: white; /* Membuat teks yang dipilih menjadi transparan */
-}
-
-      body {
-        font-family: "Jost", sans-serif;
-      }
-      .ojuju{
-        font-family: "Madimi One", sans-serif;
-      }
-
-      .text-gradient {
-        background-image: linear-gradient(to right, #E7D60D, #FF5733);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .text-gradient-2 {
-        background-image: linear-gradient(to right, #ffffff, #f3eedf);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      .gradient-background {
-        background-image: linear-gradient(to right, #e2c311, #FF5733);
-    }
-    .content {
-        position: relative;
-        background: #ffffff;
-        padding: 4rem 2rem 3rem 2rem;
-        border-radius: .75rem;
-        text-align: center;
-        overflow: hidden;
-        box-shadow: inset 1px 1px 2px #f7b910,
-          inset -1px -1px 5px #f7b910,
-          inset 1px -1px 10px  #f7b910,
-          inset -1px 1px 2px #f7b910 !important;
-        /* Efek inner box shadow di keempat sisi */
-        border: 1px dashed #f7b910 !important;
-        -webkit-border-radius: .75rem;
-        -moz-border-radius: .75rem;
-        -ms-border-radius: .75rem;
-        -o-border-radius: .75rem;
-      }
-      .swiper-container {
-        overflow-x: hidden;
-    }
-    @keyframes loaderAnimation {
-        0% { content: ". "; }
-        33% { content: ".. "; }
-        66% { content: "... "; }
-        100% { content: ". "; }
-    }
-    
-    .loader {
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        font-size: 1em;
-        position: relative;
-    }
-    
-    .loader::after {
-        content: ". ";
-        animation: loaderAnimation 1.5s infinite;
-    }
-    
-    .loader:nth-child(2)::after {
-        animation-delay: 0.33s;
-    }
-    
-    .loader:nth-child(3)::after {
-        animation-delay: 0.66s;
-    }
-    @keyframes moveUpDown {
-        0%, 100% {
-            transform: translateY(0);
+        ::-webkit-scrollbar {
+            width: 7px;
         }
-        50% {
-            transform: translateY(-20px); /* Ganti jarak gerakan vertikal sesuai kebutuhan */
+
+        ::-webkit-scrollbar-track {
+            background: white;
         }
-    }
-    
-    #banner {
-        animation: moveUpDown 2s ease-in-out infinite; /* Ubah durasi, fungsi waktu, dan iterasi animasi sesuai kebutuhan */
-    }
-    #start_predict {
-        scroll-behavior: smooth;
-    }
-    
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to right, #FF5733, #E7D60D);
+            border-radius: 5px;
+            height: 30px;
+        }
+
+        /* Handle saat hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #999999;
+        }
+
+        ::selection {
+            background: #E7D60D;
+            color: white;
+        }
+
+        body {
+            font-family: "Jost", sans-serif;
+        }
+
+        .ojuju {
+            font-family: "Madimi One", sans-serif;
+        }
+
+        .text-gradient {
+            background-image: linear-gradient(to right, #E7D60D, #FF5733);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-2 {
+            background-image: linear-gradient(to right, #ffffff, #f3eedf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-background {
+            background-image: linear-gradient(to right, #e2c311, #FF5733);
+        }
+
+        .content {
+            position: relative;
+            background: #ffffff;
+            padding: 4rem 2rem 3rem 2rem;
+            border-radius: .75rem;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: inset 1px 1px 2px #f7b910,
+                inset -1px -1px 5px #f7b910,
+                inset 1px -1px 10px #f7b910,
+                inset -1px 1px 2px #f7b910 !important;
+            border: 1px dashed #f7b910 !important;
+            -webkit-border-radius: .75rem;
+            -moz-border-radius: .75rem;
+            -ms-border-radius: .75rem;
+            -o-border-radius: .75rem;
+        }
+
+        .swiper-container {
+            overflow-x: hidden;
+        }
+
+        @keyframes loaderAnimation {
+            0% {
+                content: ". ";
+            }
+
+            33% {
+                content: ".. ";
+            }
+
+            66% {
+                content: "... ";
+            }
+
+            100% {
+                content: ". ";
+            }
+        }
+
+        .loader {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            font-size: 1em;
+            position: relative;
+        }
+
+        .loader::after {
+            content: ". ";
+            animation: loaderAnimation 1.5s infinite;
+        }
+
+        .loader:nth-child(2)::after {
+            animation-delay: 0.33s;
+        }
+
+        .loader:nth-child(3)::after {
+            animation-delay: 0.66s;
+        }
+
+        @keyframes moveUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        #banner {
+            animation: moveUpDown 2s ease-in-out infinite;
+        }
+
+        #start_predict {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
+
 <body>
     <div>
-    <header class="fixed top-0 z-50 w-full bg-gradient-to-br from-light-yellow to-white border-b max-w-screen-2xl container mx-auto xl:px-24 px-4" data-aos='fade-down' data-aos-delay='900' data-aos-duration="2000" data-aos-once="true">
-        <nav class="flex justify-between items-center py-6">
-          <a href="/" class="flex items-center gap-2 text-2xl">
-            <img src="../static/images/logo.png" class="w-10 inline-block items-center" alt="" />
-            <span class="text-gradient ojuju">Emotiven</span>
-        </a>
-            <ul class="hidden md:flex gap-12 font-semibold">
-                <li class="text-base text-primary ">
-                    <a href="#home" class="hover:text-secondary">Home</a>
-                </li>
-                <li class="text-base text-primary">
-                    <a href="#feature" class="hover:text-secondary">Our Features</a>
-                </li>
-                <li class="text-base text-primary">
-                    <a href="#member" class="hover:text-secondary">Our Team</a>
-                </li>
-                <li class="text-base text-primary">
-                    <a href="#start_predict" class="hover:text-secondary">Start a Predict</a>
-                </li>
-            </ul>
-
-            <div class="text-base text-primary font-medium space-x-5 hidden lg:block">
-                <a href="/login" class="py-2 px-5 border rounded bg-gradient-to-br from-warning to-secondary text-white hover:from-secondary hover:to-warning hover:text-primary transition duration-200 font-semibold ojuju">
-                    <i class="bi bi-person-fill text-xl me-1"></i>Guest
+        <header
+            class="fixed top-0 z-50 w-full bg-gradient-to-br from-light-yellow to-white border-b max-w-screen-2xl container mx-auto xl:px-24 px-4"
+            data-aos='fade-down' data-aos-delay='900' data-aos-duration="2000" data-aos-once="true">
+            <nav class="flex justify-between items-center py-6">
+                <a href="/" class="flex items-center gap-2 text-2xl">
+                    <img src="../static/images/logo.png" class="w-10 inline-block items-center" alt="" />
+                    <span class="text-gradient ojuju">Emotiven</span>
                 </a>
+                <ul class="hidden md:flex gap-12 font-semibold">
+                    <li class="text-base text-primary ">
+                        <a href="#home" class="hover:text-secondary">Home</a>
+                    </li>
+                    <li class="text-base text-primary">
+                        <a href="#feature" class="hover:text-secondary">Our Features</a>
+                    </li>
+                    <li class="text-base text-primary">
+                        <a href="#member" class="hover:text-secondary">Our Team</a>
+                    </li>
+                    <li class="text-base text-primary">
+                        <a href="#start_predict" class="hover:text-secondary">Start a Predict</a>
+                    </li>
+                </ul>
+
+                <div class="text-base text-primary font-medium space-x-5 hidden lg:block">
+                    <a href="/login"
+                        class="py-2 px-5 border rounded bg-gradient-to-br from-warning to-secondary text-white hover:from-secondary hover:to-warning hover:text-primary transition duration-200 font-semibold ojuju">
+                        <i class="bi bi-person-fill text-xl me-1"></i>Guest
+                    </a>
+                </div>
+
+                <div class="md:hidden block">
+                    <button id="menuToggler">
+                        <i id="menuIcon" class="bi bi-list text-xl text-primary"></i>
+                    </button>
+                </div>
+            </nav>
+            <div id="mobileMenu" class="px-4 py-5 hidden">
+                <ul>
+                    <li class="text-base text-primary py-1">
+                        <a href="/" class="hover:text-secondary">Home</a>
+                    </li>
+                    <li class="text-base text-primary py-1">
+                        <a href="/my-job" class="hover:text-secondary">Our Features</a>
+                    </li>
+                    <li class="text-base text-primary py-1">
+                        <a href="/my-job" class="hover:text-secondary">Our Team</a>
+                    </li>
+                    <li class="text-base text-primary py-1">
+                        <a href="/salary" class="hover:text-secondary">Start a Predict</a>
+                    </li>
+                </ul>
             </div>
+        </header>
 
-            <div class="md:hidden block">
-                <button id="menuToggler">
-                    <i id="menuIcon" class="bi bi-list text-xl text-primary"></i>
-                </button>
+        <!-- Jumbotron -->
+        <div class="md:px-12 p-4 max-w-screen-2xl mx-auto mt-24" id="home">
+            <div class="gradient-background rounded-xl rounded-br-[80px] md:p-9 px-4 py-9">
+                <div class="flex flex-col md:flex-row-reverse justify-between items-center gap-10">
+                    <img src="../static/images/banner.png" id="banner" class="lg:h-[386px]">
+                    <div class="md:w-3/5">
+                        <h2 class="md:text-7xl text-4xl font-bold text-white mb-6 leading-relaxed ojuju" id="heading"
+                            data-aos='fade-down' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
+                            Fastest and Accurate to Predict Emotions from Text </h2>
+                        <p class="text-white text-2xl mb-8" id="subHeading" data-aos='fade-down' data-aos-delay='500'
+                            data-aos-duration="2000" data-aos-once="true">Get quick and accurate emotion predictions
+                            from your text using our models.</p>
+                        <div class="space-x-3 space-y-4">
+                            <button onclick="window.location.href='#start_predict'"
+                                class="py-3 px-8 rounded bg-gradient-to-br from-secondary to-warning text-white hover:from-warning hover:to-secondary hover:text-primary transition duration-200 font-semibold border-none ojuju"
+                                id="btn1" data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000"
+                                data-aos-once="true"><i class="bi bi-emoji-laughing-fill text-xl me-2"></i>Predict
+                                now</button>
+                            <button
+                                class="py-3 px-8 rounded bg-gradient-to-bl from-secondary to-warning text-white hover:from-warning hover:to-secondary hover:text-primary transition duration-200 font-semibold border-none ojuju"
+                                data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true"
+                                id="btn2"><i class="bi bi-emoji-frown-fill text-xl me-2"></i>Learn more</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </nav>
-        <div id="mobileMenu" class="px-4 py-5 hidden">
-            <ul>
-                <li class="text-base text-primary py-1">
-                    <a href="/" class="hover:text-secondary">Home</a>
-                </li>
-                <li class="text-base text-primary py-1">
-                    <a href="/my-job" class="hover:text-secondary">Our Features</a>
-                </li>
-                <li class="text-base text-primary py-1">
-                    <a href="/my-job" class="hover:text-secondary">Our Team</a>
-                </li>
-                <li class="text-base text-primary py-1">
-                    <a href="/salary" class="hover:text-secondary">Start a Predict</a>
-                </li>
-            </ul>
-        </div>
-    </header>
-
-    <!-- Jumbotron -->
-    <div class="md:px-12 p-4 max-w-screen-2xl mx-auto mt-24" id="home">
-      <div class="gradient-background rounded-xl rounded-br-[80px] md:p-9 px-4 py-9">
-          <div class="flex flex-col md:flex-row-reverse justify-between items-center gap-10">
-              <img src="../static/images/banner.png" id="banner" class="lg:h-[386px]">
-              <div class="md:w-3/5">
-                  <h2 class="md:text-7xl text-4xl font-bold text-white mb-6 leading-relaxed ojuju" id="heading" data-aos='fade-down' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">Fastest and Accurate to Predict Emotions from Text </h2>
-                  <p class="text-white text-2xl mb-8" id="subHeading" data-aos='fade-down' data-aos-delay='500' data-aos-duration="2000" data-aos-once="true">Get quick and accurate emotion predictions from your text using our models.</p>
-                  <div class="space-x-3 space-y-4">
-                      <button onclick="window.location.href='#start_predict'" class="py-3 px-8 rounded bg-gradient-to-br from-secondary to-warning text-white hover:from-warning hover:to-secondary hover:text-primary transition duration-200 font-semibold border-none ojuju" id="btn1" data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true"><i class="bi bi-emoji-laughing-fill text-xl me-2"></i>Predict now</button>
-                      <button class="py-3 px-8 rounded bg-gradient-to-bl from-secondary to-warning text-white hover:from-warning hover:to-secondary hover:text-primary transition duration-200 font-semibold border-none ojuju" data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true" id="btn2"><i class="bi bi-emoji-frown-fill text-xl me-2"></i>Learn more</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <div class="my-24 md:px-14 p-4 max-w-screen-2xl mx-auto" id="feature" >
-    <div class="flex flex-col lg:flex-row justify-between items-start gap-10">
-        <div class="lg:w-1/4" data-aos='fade-right' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
-            <h3 class="text-3xl text-gradient font-bold lg:w-1/2 mb-3 ojuju">
-                Our Features
-            </h3>
-            <p class="text-base text-tartiary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-                sit saepe, cum minima quod aliquid deserunt laudantium fugiat
-                officia adipisci eos cupiditate delectus id deleniti earum neque
-                molestias hic omnis!
-            </p>
         </div>
 
-        <div class="w-full lg:w-3/4">
-            <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-12 gap-8">
-                <div class="bg-[rgba(255, 255, 255, 0.04)] rounded-lg h-96 shadow-md border-2 p-8 items-center flex justify-center hover:-translate-y-4 transition-all duration-300 cursor-pointer">
+        <div class="my-24 md:px-14 p-4 max-w-screen-2xl mx-auto" id="feature">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-10">
+                <div class="lg:w-1/4" data-aos='fade-right' data-aos-delay='400' data-aos-duration="2000"
+                    data-aos-once="true">
+                    <h3 class="text-3xl text-gradient font-bold lg:w-1/2 mb-3 ojuju">
+                        Our Features
+                    </h3>
+                    <p class="text-base text-tartiary">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+                        sit saepe, cum minima quod aliquid deserunt laudantium fugiat
+                        officia adipisci eos cupiditate delectus id deleniti earum neque
+                        molestias hic omnis!
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-3/4">
+                    <div class="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 items-start md:gap-12 gap-8">
+                        <div
+                            class="bg-[rgba(255, 255, 255, 0.04)] rounded-lg h-96 shadow-md border-2 p-8 items-center flex justify-center hover:-translate-y-4 transition-all duration-300 cursor-pointer">
+                            <div>
+                                <img src="../static/images/feature1.png" alt="" class="w-full h-48" data-aos='fade-down'
+                                    data-aos-delay='500' data-aos-duration="2000" data-aos-once="true" />
+                                <h5 class="text-2xl font-bold text-gradient px-5 text-center mt-5 ojuju"
+                                    data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000"
+                                    data-aos-once="true">
+                                    + 0.78 PERFORMANCE
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-[rgba(255, 255, 255, 0.04)] rounded-lg h-96 shadow-md border-2 p-8 items-center flex justify-center hover:-translate-y-4 transition-all duration-300 cursor-pointer md:mt-16">
+                            <div>
+                                <img src="../static/images/feature2.png" alt="" class="w-full h-48" data-aos='fade-up'
+                                    data-aos-delay='500' data-aos-duration="2000" data-aos-once="true" />
+                                <h5 class="text-2xl font-semibold text-gradient px-5 text-center mt-5 ojuju"
+                                    data-aos='fade-up' data-aos-delay='600' data-aos-duration="2000"
+                                    data-aos-once="true">
+                                    6 EMOTIONS
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-[rgba(255, 255, 255, 0.04)] rounded-lg h-96 shadow-md border-2 p-8 items-center flex justify-center hover:-translate-y-4 transition-all duration-300 cursor-pointer">
+                            <div>
+                                <img src="../static/images/feature3.png" alt="" class="w-full h-48" data-aos='fade-down'
+                                    data-aos-delay='500' data-aos-duration="2000" data-aos-once="true" />
+                                <h5 class="text-2xl font-semibold text-gradient px-5 text-center mt-5 ojuju"
+                                    data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000"
+                                    data-aos-once="true">
+                                    FINE TUNED <br>
+                                    BERT - MODEL
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-24 md:px-14 px-4 max-w-screen-2xl mx-auto" id="start_predict">
+            <div class="content rounded md:rounded-bl-[80px] md:p-9 px-10 py-9">
+                <div class="flex flex-col lg:flex-row justify-between items-center gap-10">
+                    <div class="lg:w-1/4">
+                        <h1 class="text-start text-5xl font-bold text-gradient mb-3 ojuju" data-aos='fade-right'
+                            data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
+                            Predict your <span class="text-blue">emotion with short sentence</span>
+                        </h1>
+                        <p class="text-black/70 text-lg mb-8"></p>
+                    </div>
+
+                    <div class="w-full lg:w-3/4">
+                        <form id="emotionForm">
+                            <div class="flex justify-start md:flex-row flex-col md:gap-0 gap-4">
+                                <div class="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-orange-400 w-full"
+                                    data-aos='fade-left' data-aos-delay='500' data-aos-duration="2000"
+                                    data-aos-once="true">
+                                    <input type="text" id="sentence" name="sentence" autocomplete="off" required
+                                        placeholder="Type your sentence now!"
+                                        class="w-full bg-white border border-orange-500 py-2 px-5 pr-8 rounded-md ring-1 ring-inset ring-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 text-gray-900 placeholder-gray-400 sm:text-sm sm:leading-6" />
+                                </div>
+
+                                <div class="flex md:w-1/3 w-full">
+                                    <div class="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-orange-400 w-full"
+                                        data-aos='fade-left' data-aos-delay='600' data-aos-duration="2000"
+                                        data-aos-once="true">
+                                        <select name="model" id="model"
+                                            class="w-full bg-white border border-orange-500 py-2 px-4 pr-8 rounded-md ring-1 ring-inset ring-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 text-gray-900 placeholder-gray-400 sm:text-sm sm:leading-6 cursor-pointer">
+                                            <option value="model1">M - Original</option>
+                                            <option value="model2">M - Astonishing</option>
+                                            <option value="model3">M - Excellent</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="flex md:w-1/3 w-full">
+                                    <div class="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-orange-400 w-full"
+                                        data-aos='fade-left' data-aos-delay='700' data-aos-duration="2000"
+                                        data-aos-once="true">
+                                        <select name="tokenizer" id="tokenizer"
+                                            class="w-full bg-white border border-orange-500 py-2 px-4 pr-8 rounded-md ring-1 ring-inset ring-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 text-gray-900 placeholder-gray-400 sm:text-sm sm:leading-6 cursor-pointer">
+                                            <option value="model1">T - Original</option>
+                                            <option value="model2">T - Astonishing</option>
+                                            <option value="model3">T - Excellent</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" id="predictButton"
+                                    class="py-2 px-8 border rounded bg-gradient-to-br from-warning to-secondary text-white hover:from-secondary hover:to-warning hover:text-primary transition duration-200 font-semibold ojuju"
+                                    data-aos='fade-left' data-aos-delay='800' data-aos-duration="2000"
+                                    data-aos-once="true">
+                                    Predict</button>
+
+                            </div>
+                        </form>
+
+                        <div class="justify-end">
+                            <div class="w-full">
+                                <div class="flex justify-center mt-4">
+                                    <img src="#" alt="Emoticon" id="emotionImage" style="display: none;"
+                                        class="md:h-36 h-24" />
+                                </div>
+
+                                <div id="result" class="hidden mt-4">
+                                    <label class="block mb-2 text-sm text-start ojuju" for="marah">Anger</label>
+                                    <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
+                                        <div class="progress-bar bg-gradient-to-bl from-secondary to-warning h-full"
+                                            id="marah"></div>
+                                    </div>
+                                    <label class="block mb-2 text-sm text-start ojuju" for="senang">Happy</label>
+                                    <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
+                                        <div class="progress-bar bg-gradient-to-bl from-warning to-secondary h-full"
+                                            id="senang"></div>
+                                    </div>
+                                    <label class="block mb-2 text-sm text-start ojuju" for="sedih">Sadness</label>
+                                    <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
+                                        <div class="progress-bar bg-gradient-to-bl from-secondary to-warning h-full"
+                                            id="sedih"></div>
+                                    </div>
+                                    <label class="block mb-2 text-sm text-start ojuju" for="takut">Fear</label>
+                                    <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
+                                        <div class="progress-bar bg-gradient-to-bl from-warning to-secondary h-full"
+                                            id="takut"></div>
+                                    </div>
+                                    <label class="block mb-2 text-sm text-start ojuju" for="cinta">Love</label>
+                                    <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
+                                        <div class="progress-bar bg-gradient-to-bl from-secondary to-warning h-full"
+                                            id="cinta"></div>
+                                    </div>
+                                    <label class="block mb-2 text-sm text-start ojuju" for="jijik">Disgust</label>
+                                    <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
+                                        <div class="progress-bar bg-gradient-to-bl from-warning to-secondary h-full"
+                                            id="jijik"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:px-14 px-4 max-w-screen-2xl mx-auto my-12" id="member">
+            <div class="text-center py-8">
+                <h5 class="md:text-3xl text-3xl font-bold text-gradient ojuju mb-2 mt-4" data-aos='fade-up'
+                    data-aos-delay='500' data-aos-duration="2000" data-aos-once="true">
+                    Meet Our Team
+                </h5>
+                <p className="text-tartiary md:w-1/3 mx-auto px-4" data-aos='fade-up' data-aos-delay='600'
+                    data-aos-duration="2000" data-aos-once="true">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            <div class="content">
+                <div class="swiper-container" style="overflow: hidden;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/alex.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='100' data-aos-duration="1000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='100' data-aos-duration="1000" data-aos-once="true">alexander
+                                        william <br>wijaya oei</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-warning to-secondary shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/anhar.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='200' data-aos-duration="2000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient-2 font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='200' data-aos-duration="2000" data-aos-once="true">anharul
+                                        <br>zikri</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/bima.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='300' data-aos-duration="2000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='300' data-aos-duration="2000" data-aos-once="true">bima
+                                        <br>aryadinata</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-warning to-secondary shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/deva.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient-2 font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">deva
+                                        <br>saumena</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/iman.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">iman carrazi
+                                        <br>syamsidi</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-warning to-secondary shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/rizalul.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient-2 font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">Muhammad
+                                        rizalul fikri <br>syah dani</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="p-4">
+                                <div
+                                    class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
+                                    <div class="flex justify-center">
+                                        <img src="../static/images/putri.png" alt="Green List Icon" class="h-48 py-4"
+                                            data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000"
+                                            data-aos-once="true">
+                                    </div>
+                                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up'
+                                        data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">Putri
+                                        <br>Agustina</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gradient-background md:px-14 p-4 max-w-screen-2xl mx-auto text-white" data-aos="fade-down"
+            data-aos-easing="linear" data-aos-once="true">
+            <div class="my-12 flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2 space-y-8">
+                    <a href="" class="text-2xl font-semibold flex items-center space-x-3 text-primary">
+                        <img class="w-10 inline-block items-center" src="../static/images/logo.png" alt="" />
+                        <span class="text-white">Emotiven</span>
+                    </a>
+                    <p class="md:w-1/2">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
+                        laboriosam voluptates vitae
+                    </p>
                     <div>
-                        <img src="../static/images/feature1.png" alt="" class="w-full h-48" data-aos='fade-down' data-aos-delay='500' data-aos-duration="2000" data-aos-once="true" />
-                        <h5 class="text-2xl font-bold text-gradient px-5 text-center mt-5 ojuju" data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true">
-                            + 0.78 PERFORMANCE
-                        </h5>
+                        <input type="email" name="email" id="email" placeholder="Type your email"
+                            class="bg-orange-200 py-2 px-4 rounded-md focus:outline-none" />
+                        <input type="submit" value="Subscribe"
+                            class="py-2 px-5 rounded bg-gradient-to-br from-warning to-secondary text-white hover:from-secondary hover:to-warning hover:text-primary transition duration-200 font-semibold ojuju" />
                     </div>
                 </div>
-                <div class="bg-[rgba(255, 255, 255, 0.04)] rounded-lg h-96 shadow-md border-2 p-8 items-center flex justify-center hover:-translate-y-4 transition-all duration-300 cursor-pointer md:mt-16">
-                    <div>
-                        <img src="../static/images/feature2.png" alt="" class="w-full h-48" data-aos='fade-up' data-aos-delay='500' data-aos-duration="2000" data-aos-once="true"/>
-                        <h5 class="text-2xl font-semibold text-gradient px-5 text-center mt-5 ojuju" data-aos='fade-up' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true">
-                            6 EMOTIONS
-                        </h5>
+
+                <div class="md:w-1/2 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
+                    <div class="space-y-4 mt-5">
+                        <h4 class="text-xl">
+                            Platform
+                        </h4>
+                        <ul class="space-y-3">
+                            <a href="/" class="block hover:text-gray-300">Overview</a>
+                            <a href="/" class="block hover:text-gray-300">Features</a>
+                            <a href="/" class="block hover:text-gray-300">Team</a>
+                            <a href="/" class="block hover:text-gray-300">Predict</a>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 mt-5">
+                        <h4 class="text-xl">
+                            Help
+                        </h4>
+                        <ul class="space-y-3">
+                            <a href="/" class="block hover:text-gray-300">Bacot</a>
+                            <a href="/" class="block hover:text-gray-300">Apaansi</a>
+                            <a href="/" class="block hover:text-gray-300">Boong</a>
+                            <a href="/" class="block hover:text-gray-300">Mangea</a>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 mt-5">
+                        <h4 class="text-xl">
+                            Contact
+                        </h4>
+                        <ul class="space-y-3">
+                            <p class="hover:text-gray-300">Bacot</p>
+                            <p class="hover:text-gray-300">Mangea</p>
+                            <p class="hover:text-gray-300">Emang iya</p>
+                            <p class="hover:text-gray-300">045544518</p>
+                        </ul>
                     </div>
                 </div>
-                <div class="bg-[rgba(255, 255, 255, 0.04)] rounded-lg h-96 shadow-md border-2 p-8 items-center flex justify-center hover:-translate-y-4 transition-all duration-300 cursor-pointer">
-                    <div>
-                        <img src="../static/images/feature3.png" alt="" class="w-full h-48" data-aos='fade-down' data-aos-delay='500' data-aos-duration="2000" data-aos-once="true"/>
-                        <h5 class="text-2xl font-semibold text-gradient px-5 text-center mt-5 ojuju" data-aos='fade-down' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true">
-                            FINE TUNED <br>
-                            BERT - MODEL
-                        </h5>
-                    </div>
+            </div>
+
+            <hr />
+
+            <div class="flex flex-col sm:flex-row gap-8 sm:items-center justify-between my-8 ">
+                <p>Lorem ipsum dolor sit amet. All right reserved.</p>
+                <div class="flex items-center space-x-5">
+                    <img src="../static/images/jijik.png" alt=""
+                        class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300 " />
+                    <img src="../static/images/marah.png" alt=""
+                        class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300" />
+                    <img src="../static/images/sedih.png" alt=""
+                        class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300" />
+                    <img src="../static/images/senang.png" alt=""
+                        class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300" />
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="my-24 md:px-14 px-4 max-w-screen-2xl mx-auto" id="start_predict">
-    <div class="content rounded md:rounded-bl-[80px] md:p-9 px-10 py-9">
-    <div class="flex flex-col lg:flex-row justify-between items-center gap-10">
-        <div class="lg:w-1/4">
-            <h1 class="text-start text-5xl font-bold text-gradient mb-3 ojuju" data-aos='fade-right' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
-                Predict your <span class="text-blue">emotion with short sentence</span>
-              </h1>
-              <p class="text-black/70 text-lg mb-8"></p>
-        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                function addLoaderAnimation() {
+                    $("#predictButton").text("");
+                    $("#predictButton").append('<span id="loaderAnimation" class="loader"></span>');
+                }
+                function removeLoaderAnimation() {
+                    $("#loaderAnimation").remove();
+                }
+                $("#emotionForm").submit(function (event) {
+                    event.preventDefault();
+                    $("#predictButton").prop('disabled', true);
+                    addLoaderAnimation();
+                    var formData = {
+                        sentence: $("#sentence").val(),
+                        model: $("#model").val(),
+                        tokenizer: $("#tokenizer").val()
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "/predict",
+                        data: JSON.stringify(formData),
+                        contentType: "application/json",
+                        success: function (data) {
+                            $("#emotion").text("Predicted Emotion: " + data.emotion);
+                            Object.keys(data.probabilities).forEach(function (emotion) {
+                                $("#" + emotion + "Probability").text(
+                                    "Confidence Rate (" + emotion.charAt(0).toUpperCase() + emotion.slice(1) + "): " +
+                                    (data.probabilities[emotion] * 100).toFixed(2) +
+                                    "%"
+                                );
+                            });
 
-        <div class="w-full lg:w-3/4">
-            <form id="emotionForm">
-                <div class="flex justify-start md:flex-row flex-col md:gap-0 gap-4">
-                  <div class="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-orange-400 w-full" data-aos='fade-left' data-aos-delay='500' data-aos-duration="2000" data-aos-once="true">
-                    <input
-                    type="text"
-                    id="sentence"
-                    name="sentence"
-                    autocomplete="off"
-                    required
-                      placeholder="Type your sentence now!"
-                      class="w-full bg-white border border-orange-500 py-2 px-5 pr-8 rounded-md ring-1 ring-inset ring-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 text-gray-900 placeholder-gray-400 sm:text-sm sm:leading-6"
-                    />
-                  </div>
+                            var highestEmotion = Object.keys(data.probabilities).reduce(function (a, b) {
+                                return data.probabilities[a] > data.probabilities[b] ? a : b
+                            });
+                            $("#emotionImage").attr("src", "../static/images/" + highestEmotion + ".png");
+                            $("#emotionImage").show();
 
-                  <div class="flex md:w-1/3 w-full">
-                    <div class="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-orange-400 w-full" data-aos='fade-left' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true">
-                        <select name="model" id="model" class="w-full bg-white border border-orange-500 py-2 px-4 pr-8 rounded-md ring-1 ring-inset ring-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 text-gray-900 placeholder-gray-400 sm:text-sm sm:leading-6 cursor-pointer">
-                            <option value="model1">M - Original</option>
-                            <option value="model2">M - Astonishing</option>
-                            <option value="model3">M - Excellent</option>
-                        </select>
-                    </div>
-                  </div>
-                  <div class="flex md:w-1/3 w-full">
-                    <div class="flex md:rounded-s-md rounded shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-orange-400 w-full" data-aos='fade-left' data-aos-delay='700' data-aos-duration="2000" data-aos-once="true">
-                        <select name="tokenizer" id="tokenizer" class="w-full bg-white border border-orange-500 py-2 px-4 pr-8 rounded-md ring-1 ring-inset ring-orange-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-orange-400 text-gray-900 placeholder-gray-400 sm:text-sm sm:leading-6 cursor-pointer">
-                            <option value="model1">T - Original</option>
-                            <option value="model2">T - Astonishing</option>
-                            <option value="model3">T - Excellent</option>
-                        </select>
-                    </div>
-                  </div>
-                  <button type="submit" id="predictButton" class="py-2 px-8 border rounded bg-gradient-to-br from-warning to-secondary text-white hover:from-secondary hover:to-warning hover:text-primary transition duration-200 font-semibold ojuju" data-aos='fade-left' data-aos-delay='800' data-aos-duration="2000" data-aos-once="true"> 
-                Predict</button>
-          
-                </div>
-              </form>
-
-              <div class="justify-end">
-                <div class="w-full">
-                    <div class="flex justify-center mt-4">
-                        <img src="#" alt="Emoticon" id="emotionImage" style="display: none;" class="md:h-36 h-24" />
-                    </div>
-        
-                      <div id="result" class="hidden mt-4">
-                        <label class="block mb-2 text-sm text-start ojuju" for="marah">Anger</label>
-                        <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
-                          <div class="progress-bar bg-gradient-to-bl from-secondary to-warning h-full" id="marah"></div>
-                        </div>
-                        <label class="block mb-2 text-sm text-start ojuju" for="senang">Happy</label>
-                        <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
-                            <div class="progress-bar bg-gradient-to-bl from-warning to-secondary h-full" id="senang"></div>
-                        </div>
-                        <label class="block mb-2 text-sm text-start ojuju" for="sedih">Sadness</label>
-                        <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
-                            <div class="progress-bar bg-gradient-to-bl from-secondary to-warning h-full" id="sedih"></div>
-                        </div>
-                        <label class="block mb-2 text-sm text-start ojuju" for="takut">Fear</label>
-                        <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
-                            <div class="progress-bar bg-gradient-to-bl from-warning to-secondary h-full" id="takut"></div>
-                        </div>
-                        <label class="block mb-2 text-sm text-start ojuju" for="cinta">Love</label>
-                        <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
-                            <div class="progress-bar bg-gradient-to-bl from-secondary to-warning h-full" id="cinta"></div>
-                        </div>
-                        <label class="block mb-2 text-sm text-start ojuju" for="jijik">Disgust</label>
-                        <div class="w-full h-6 shadow-sm bg-gray-100 rounded overflow-hidden mb-4 relative">
-                            <div class="progress-bar bg-gradient-to-bl from-warning to-secondary h-full" id="jijik"></div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-
-<div class="md:px-14 px-4 max-w-screen-2xl mx-auto my-12" id="member"> 
-    <div class="text-center py-8">
-        <h5 class="md:text-3xl text-3xl font-bold text-gradient ojuju mb-2 mt-4" data-aos='fade-up' data-aos-delay='500' data-aos-duration="2000" data-aos-once="true">
-            Meet Our Team
-        </h5>
-        <p className="text-tartiary md:w-1/3 mx-auto px-4" data-aos='fade-up' data-aos-delay='600' data-aos-duration="2000" data-aos-once="true">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-    </div>
-<div class="content">
-    <div class="swiper-container" style="overflow: hidden;">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/alex.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='100' data-aos-duration="1000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='100' data-aos-duration="1000" data-aos-once="true">alexander william <br>wijaya oei</h3>
-                </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-warning to-secondary shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/anhar.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='200' data-aos-duration="2000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient-2 font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='200' data-aos-duration="2000" data-aos-once="true">anharul <br>zikri</h3>
-                </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/bima.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='300' data-aos-duration="2000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='300' data-aos-duration="2000" data-aos-once="true">bima <br>aryadinata</h3>
-                </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-warning to-secondary shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/deva.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient-2 font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">deva <br>saumena</h3>
-                </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/iman.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">iman carrazi <br>syamsidi</h3>
-                </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-warning to-secondary shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/rizalul.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient-2 font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">Muhammad rizalul fikri <br>syah dani</h3>
-                </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="p-4">
-                    <div class="bg-[rgba(255, 255, 255, 0.04)] hover:-translate-y-4 transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-light-yellow shadow-md border-2 rounded-lg px-4 py-10 max-w-xs">
-                    <div class="flex justify-center">
-                        <img src="../static/images/putri.png" alt="Green List Icon" class="h-48 py-4" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">
-                    </div>                    
-                    <h3 class="text-sm text-gradient font-extrabold mb-2 uppercase" data-aos='fade-up' data-aos-delay='400' data-aos-duration="2000" data-aos-once="true">Putri <br>Agustina</h3>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-</div>
-
-<div class="gradient-background md:px-14 p-4 max-w-screen-2xl mx-auto text-white" data-aos="fade-down"
-data-aos-easing="linear" data-aos-once="true">
-    <div class="my-12 flex flex-col md:flex-row gap-10">
-      <div class="md:w-1/2 space-y-8">
-        <a
-          href=""
-          class="text-2xl font-semibold flex items-center space-x-3 text-primary"
-        >
-          <img class="w-10 inline-block items-center" src="../static/images/logo.png" alt="" />
-          <span class="text-white">Emotiven</span>
-        </a>
-        <p class="md:w-1/2">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo
-          laboriosam voluptates vitae
-        </p>
-        <div>
-          <input type="email" name="email" id="email" placeholder="Type your email" class="bg-orange-200 py-2 px-4 rounded-md focus:outline-none" />
-          <input type="submit" value="Subscribe" class="py-2 px-5 rounded bg-gradient-to-br from-warning to-secondary text-white hover:from-secondary hover:to-warning hover:text-primary transition duration-200 font-semibold ojuju" />
-        </div>
-      </div>
-
-      <div class="md:w-1/2 flex flex-col md:flex-row flex-wrap justify-between gap-8 items-start">
-          <div class="space-y-4 mt-5">
-              <h4 class="text-xl">
-                  Platform 
-              </h4>
-              <ul class="space-y-3">
-                  <a href="/" class="block hover:text-gray-300">Overview</a>
-                  <a href="/" class="block hover:text-gray-300">Features</a>
-                  <a href="/" class="block hover:text-gray-300">Team</a>
-                  <a href="/" class="block hover:text-gray-300">Predict</a>
-              </ul>
-          </div>
-          <div class="space-y-4 mt-5">
-              <h4 class="text-xl">
-                  Help 
-              </h4>
-              <ul class="space-y-3">
-                  <a href="/" class="block hover:text-gray-300">Bacot</a>
-                  <a href="/" class="block hover:text-gray-300">Apaansi</a>
-                  <a href="/" class="block hover:text-gray-300">Boong</a>
-                  <a href="/" class="block hover:text-gray-300">Mangea</a>
-              </ul>
-          </div>
-          <div class="space-y-4 mt-5">
-              <h4 class="text-xl">
-                  Contact 
-              </h4>
-              <ul class="space-y-3">
-                  <p class="hover:text-gray-300">Bacot</p>
-                  <p class="hover:text-gray-300">Mangea</p>
-                  <p class="hover:text-gray-300">Emang iya</p>
-                  <p class="hover:text-gray-300">045544518</p>
-              </ul>
-          </div>
-      </div>
-    </div>
-
-    <hr />
-
-    <div class="flex flex-col sm:flex-row gap-8 sm:items-center justify-between my-8 ">
-      <p>Lorem ipsum dolor sit amet. All right reserved.</p>
-      <div class="flex items-center space-x-5">
-          <img src="../static/images/jijik.png" alt="" class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300 "/>
-          <img src="../static/images/marah.png" alt="" class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300"/>
-          <img src="../static/images/sedih.png" alt="" class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300"/>
-          <img src="../static/images/senang.png" alt="" class="w-10 h-10 cursor-pointer hover: -translate-y-4 transition-all duration-300"/>
-      </div>
-    </div>
-  </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <script>
-// Fungsi untuk menambahkan animasi titik
-$(document).ready(function () {
-    // Fungsi untuk menambahkan animasi titik
-    function addLoaderAnimation() {
-        $("#predictButton").text("");
-        $("#predictButton").append('<span id="loaderAnimation" class="loader"></span>');
-    }
-
-    // Fungsi untuk menghapus animasi titik
-    function removeLoaderAnimation() {
-        $("#loaderAnimation").remove();
-    }
-
-    // Menambahkan event handler untuk form submit
-    $("#emotionForm").submit(function (event) {
-        event.preventDefault();
-        $("#predictButton").prop('disabled', true); // Menonaktifkan tombol selama proses
-        addLoaderAnimation(); // Memanggil fungsi untuk menambahkan animasi titik
-        var formData = {
-            sentence: $("#sentence").val(),
-            model: $("#model").val(), // Menambahkan nilai model dari dropdown
-            tokenizer: $("#tokenizer").val() // Menambahkan nilai tokenizer dari dropdown
-        };
-        $.ajax({
-            type: "POST",
-            url: "/predict",
-            data: JSON.stringify(formData),
-            contentType: "application/json",
-            success: function (data) {
-                $("#emotion").text("Predicted Emotion: " + data.emotion);
-                // Menampilkan probabilitas untuk setiap kategori emosi
-                Object.keys(data.probabilities).forEach(function (emotion) {
-                    $("#" + emotion + "Probability").text(
-                        "Confidence Rate (" + emotion.charAt(0).toUpperCase() + emotion.slice(1) + "): " +
-                        (data.probabilities[emotion] * 100).toFixed(2) +
-                        "%"
-                    );
+                            updateProgressBarWithAnimation(data.probabilities);
+                            $("#result").removeClass("hidden");
+                            removeLoaderAnimation();
+                            $("#predictButton").prop('disabled', false);
+                            $("#predictButton").text("Predict");
+                        },
+                        error: function (xhr, status, error) {
+                            console.error("Error:", error);
+                            removeLoaderAnimation();
+                            $("#predictButton").prop('disabled', false);
+                            $("#predictButton").text("Predict");
+                        },
+                    });
                 });
 
-                // Menentukan emotikon berdasarkan probabilitas tertinggi
-                var highestEmotion = Object.keys(data.probabilities).reduce(function (a, b) {
-                    return data.probabilities[a] > data.probabilities[b] ? a : b
+                function updateProgressBarWithAnimation(probabilities) {
+                    const emotions = [
+                        "cinta",
+                        "jijik",
+                        "marah",
+                        "sedih",
+                        "senang",
+                        "takut",
+                    ];
+                    emotions.forEach((emotion) => {
+                        const progressBar = $("#" + emotion);
+                        progressBar.css("width", "0%");
+                        let currentWidth = 0;
+                        const targetWidth = probabilities[emotion] * 100;
+                        const totalFrames = 100;
+                        const animationDuration = 3000;
+                        const frameDuration = animationDuration / totalFrames;
+                        const step = (targetWidth / totalFrames);
+                        let frame = 0;
+
+                        const animate = () => {
+                            if (frame === totalFrames) {
+                                clearInterval(interval);
+                                return;
+                            }
+
+                            currentWidth += step;
+                            progressBar.css("width", currentWidth + "%");
+                            frame++;
+
+                            const formattedWidth = (probabilities[emotion] * 100).toFixed(3);
+                            const displayWidth =
+                                formattedWidth.slice(0, -3) +
+                                formattedWidth.slice(-3).padStart(3, "0");
+                            progressBar.html(
+                                `<span style="color: black; font-weight: bold; font-size: 10px; line-height: 1.5; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">${displayWidth}</span>`
+                            );
+                        };
+
+                        animate();
+                        const interval = setInterval(animate, frameDuration);
+                    });
+                }
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggler = document.getElementById("menuToggler");
+                const mobileMenu = document.getElementById("mobileMenu");
+                const menuIcon = document.getElementById("menuIcon");
+
+                menuToggler.addEventListener("click", function () {
+                    mobileMenu.classList.toggle("hidden");
+                    if (menuIcon.classList.contains("bi-list")) {
+                        menuIcon.classList.remove("bi-list");
+                        menuIcon.classList.add("bi-x");
+                    } else {
+                        menuIcon.classList.remove("bi-x");
+                        menuIcon.classList.add("bi-list");
+                    }
                 });
-                $("#emotionImage").attr("src", "../static/images/" + highestEmotion + ".png");
-                $("#emotionImage").show();
-
-                updateProgressBarWithAnimation(data.probabilities);
-                $("#result").removeClass("hidden");
-                removeLoaderAnimation(); // Menghapus animasi titik setelah proses selesai
-                $("#predictButton").prop('disabled', false); // Mengaktifkan tombol kembali setelah proses selesai
-                $("#predictButton").text("Predict");
-            },
-            error: function (xhr, status, error) {
-                console.error("Error:", error);
-                removeLoaderAnimation(); // Menghapus animasi titik jika ada kesalahan
-                $("#predictButton").prop('disabled', false); // Mengaktifkan tombol kembali jika ada kesalahan
-                $("#predictButton").text("Predict");
-            },
-        });
-    });
-
-    function updateProgressBarWithAnimation(probabilities) {
-        const emotions = [
-            "cinta",
-            "jijik",
-            "marah",
-            "sedih",
-            "senang",
-            "takut",
-        ];
-        emotions.forEach((emotion) => {
-            const progressBar = $("#" + emotion);
-            progressBar.css("width", "0%"); // Mengatur ulang lebar progress bar ke 0 sebelum memulai animasi untuk prediksi baru
-            let currentWidth = 0;
-            const targetWidth = probabilities[emotion] * 100; // Lebar target progress bar dalam persen
-            const totalFrames = 100; // Total frame animasi
-            const animationDuration = 3000; // Durasi animasi dalam milidetik (misalnya 1000ms = 1 detik)
-            const frameDuration = animationDuration / totalFrames; // Durasi setiap frame dalam milidetik
-            const step = (targetWidth / totalFrames); // Langkah untuk setiap frame
-            let frame = 0;
-    
-            const animate = () => {
-                if (frame === totalFrames) {
-                    clearInterval(interval);
-                    return;
-                }
-    
-                currentWidth += step;
-                progressBar.css("width", currentWidth + "%");
-                frame++;
-    
-                const formattedWidth = (probabilities[emotion] * 100).toFixed(3); // Format nilai dengan tiga angka di belakang koma
-                const displayWidth =
-                    formattedWidth.slice(0, -3) +
-                    formattedWidth.slice(-3).padStart(3, "0"); // Memisahkan angka ribuan dan tambahkan '0' di depan jika kurang dari 3 digit
-                progressBar.html(
-                    `<span style="color: black; font-weight: bold; font-size: 10px; line-height: 1.5; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);">${displayWidth}</span>`
-                ); // Menampilkan angka di tengah progress bar dengan warna hitam, teks ditebalkan, font yang lebih kecil, dan tiga angka di belakang koma
-            };
-    
-            animate();
-            const interval = setInterval(animate, frameDuration);
-        });
-    }    
-});
-</script>
-
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuToggler = document.getElementById("menuToggler");
-            const mobileMenu = document.getElementById("mobileMenu");
-            const menuIcon = document.getElementById("menuIcon");
-
-            menuToggler.addEventListener("click", function () {
-                mobileMenu.classList.toggle("hidden");
-                // Ganti ikon saat tombol menu di klik
-                if (menuIcon.classList.contains("bi-list")) {
-                    menuIcon.classList.remove("bi-list");
-                    menuIcon.classList.add("bi-x");
-                } else {
-                    menuIcon.classList.remove("bi-x");
-                    menuIcon.classList.add("bi-list");
-                }
             });
-        });
-    </script>
-    <!-- JS Swiper -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-      </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var swiper = new Swiper('.swiper-container', {
-          slidesPerView: 1, // Menampilkan satu slide per tampilan pada perangkat mobile
-          breakpoints: {
-            1024: {
-              slidesPerView: 4 // Menampilkan empat slide per tampilan pada perangkat laptop saat lebar layar mencapai 1024px
-            }
-          },
-          spaceBetween: 0,
-          loop: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      });
-    </script>
-    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            AOS.init({
-                once: true
+        </script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 1,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 4 
+                        }
+                    },
+                    spaceBetween: 0,
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
             });
-        });
-      </script> -->
-
-
+        </script>
 </body>
 </html>
