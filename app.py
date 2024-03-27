@@ -18,14 +18,6 @@ model_tokenizer_mapping = {
     'model3': {
         'model_checkpoint_path': 'model/model-finetuned-81-78-78-79/fine_tuned_model_checkpoint10.pt',
         'tokenizer_directory': 'model/model-finetuned-81-78-78-79/'
-    },
-    'model4': {
-        'model_checkpoint_path': 'model/model-finetuned-80-78-77-78/fine_tuned_model_checkpoint10 (1).pt',
-        'tokenizer_directory': 'model/model-finetuned-80-78-77-78/'
-    },
-    'model5': {
-        'model_checkpoint_path': 'model/model-finetuned-79-77-77-78/fine_tuned_model_checkpoint9.pt',
-        'tokenizer_directory': 'model/model-finetuned-79-77-77-78/'
     }
 }
 
